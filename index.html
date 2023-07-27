@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="./assets/css/materialize.min.css">
+    <title>To-Do List</title>
+    <style>
+        input[type="text"].has-error,
+        .has-error {
+            border-bottom-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <div id="main" class="card">
+                    <div class="card-content">
+                        <span class="card-title">Task List</span>
+                        <div class="row">
+                            <form action="" id="task-form" method="GET">
+                                <div class="input-field col s12">
+                                    <input id="task" type="text">
+                                    <label for="task">New Task</label>
+                                </div>
+                                <button class="btn waves-effect waves-light" type="submit" name="send">
+                                    <i class="material-icons right ml-2">send</i>
+                                </button>
+                            </form>
+                        </div><!-- /.row -->
+                        <div class="card-action">
+                            <h4 id="task-title" class="bold">Tasks</h4>
+                            <div class="input-field col s12">
+                                <input id="filterTask" type="text">
+                                <label for="filterTask">Filter Task</label>
+                            </div>
+                            <ul class="collection" id="taskList">
+
+                            </ul>
+                            <a href="https://studylinkclasses.com" class="waves-effect waves-light btn grey darken-4"
+                                id="clearAll">Clear All</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODALS -->
+    <!-- EMPTY INPUT MODAL -->
+    <div id="emptyInputModal" class="modal">
+        <div class="modal-content">
+            <h4>Empty Error!</h4>
+            <p>Please enter some task to insert!</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Ok</a>
+        </div>
+    </div>
+
+    <script src="./assets/js/materialize.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
